@@ -1,7 +1,7 @@
 <?php 
 	include('conexion.php');
 	$id=$_GET['id'];
-	$sql="Select * from asociado where id=$id";
+	$sql="Select * from asociado where id_asociado=$id";
 	$asociado=$con->query($sql);
 
 	$datos=$asociado->fetch_assoc();
@@ -37,7 +37,7 @@
 		<div class="collapse navbar-collapse" id="navbarsExample03">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item ">
-					<a class="nav-link" href="index.php">Listado</a>
+					<a class="nav-link" href="listado.php">Listado</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="nuevo.php">Nuevo asociado</a>

@@ -39,13 +39,13 @@ if ($id==0) {
             agencia=?,
 			fecha=?,
 			estado=?
-			where id=?";
+			where id_asociado=?";
 	$stmt= $con->prepare($sql);
 
 	$stmt->bind_param("sssssissssi",$dui,$nit,$nombre,$direccion,$telefono,$edad,$profesion,$agencia,$fecha,$estado,$id);
 	$stmt->execute();
 }
 
-header("Location:index.php");
+header("Location:listado.php");
 
 ?>
